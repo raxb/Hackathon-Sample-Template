@@ -39,12 +39,9 @@ public class PatientDetailService {
 				PatientEntity.class).setParameter("appointmentDate", appointmentDate, TemporalType.TIMESTAMP)
 				.getResultList();
 	}
-	
-	
+
 	public void updateAppointment(@Observes AddAppointmentEvent addAppointmentEvent) {
-		System.out.println("--------------------------------------"+addAppointmentEvent.getPatientEntity());
 		em.merge(addAppointmentEvent.getPatientEntity());
 	}
-	
 
 }
