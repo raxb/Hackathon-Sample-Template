@@ -1,0 +1,3 @@
+create table if not exists PatientEntity(patient_id int not null, first_name varchar(255), last_name varchar(255), gender varchar(10), age int, email varchar(30), address_line1 varchar(100), address_line2 varchar(100), city varchar(20), state varchar(20), country varchar(20), zip_code varchar(20), last_appointment date, upcoming_appointment date, primary key (patient_id));
+
+insert into PatientEntity (patient_id, first_name, last_name, gender, age, email, address_line1, address_line2, city, state, country, zip_code, last_appointment, upcoming_appointment) values (1000, 'ABC','XYZ','MALE',30,'abc@xyz.com','addressLine1','addressLine2','city','state','country','zip_code','2023-01-01','2023-10-10');
